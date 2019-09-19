@@ -1,0 +1,5 @@
+[book]
+authors = ["Alexander Andreyev"]
+multilingual = false
+src = "src"
+title = "WIKI"
