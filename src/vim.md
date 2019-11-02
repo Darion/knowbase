@@ -20,6 +20,23 @@
     * `.` works if `repeat.vim` installed
   * [vim-repeat](https://github.com/tpope/vim-repeat)
     * `.` command support for some plugins
+* Search
+  * [CtrlSF](https://github.com/dyng/ctrlsf.vim)
+    * You can edit search results in-place
+    * `CtrlSF needle`
+    * `CtrlSFOpen`/`CtrlSFToggle` -- open/toggle window with last search results
+    * Search results window keybindings:
+      * `Enter`/`o` -- open file and close search window
+      * `O` -- open file and leave search window opened
+      * `P` -- preview
+      * `u` -- undo changes
+      * `:w` -- save all changes
+      * `q` -- close search window
+      * `M` -- toggle regular search results window with quickfix window
+      * `<C-J>`/`<C-K>` - next/previous search match
+    * Another commands you may want to bind
+      * `<Plug>CtrlSFVwordExec` -- find visually selected word
+      * `<Plug>CtrlSFCCwordPath` -- find word under the cursor, with word boundaries
 * UI
   * [terminus](https://github.com/wincent/terminus)
   * [vim-airline](https://github.com/vim-airline/vim-airline)
@@ -42,4 +59,5 @@
     * folding unchanged text: `:GitGutterFold`
 * Other
   * [Goyo](https://github.com/junegunn/goyo.vim)
-    
+* Plugins to consider    
+  * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
