@@ -3,4 +3,9 @@
 - [Chapter 1](./chapter_1.md)
 - [Computer stuff](./computer_stuff.md)
   - [Vim](./vim.md)
-
+  - [Xorg](./xorg.md)
+    - [Xlib](./xlib.md)
+  - [Taskwarrior](./taskwarrior.md)
+  - [Timewarrior](./timew.md)
+  - [Keyboards](./keyboards.md)
+    - [Ergodox](./ergodox.md)
