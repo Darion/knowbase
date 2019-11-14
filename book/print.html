@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>WIKI</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="about.html"><strong aria-hidden="true">1.</strong> About</a></li><li><a href="computer_stuff.html"><strong aria-hidden="true">2.</strong> Computer stuff</a></li><li><ol class="section"><li><a href="vim.html"><strong aria-hidden="true">2.1.</strong> Vim</a></li><li><a href="xorg.html"><strong aria-hidden="true">2.2.</strong> Xorg</a></li><li><ol class="section"><li><a href="xlib.html"><strong aria-hidden="true">2.2.1.</strong> Xlib</a></li></ol></li><li><a href="taskwarrior.html"><strong aria-hidden="true">2.3.</strong> Taskwarrior</a></li><li><a href="timew.html"><strong aria-hidden="true">2.4.</strong> Timewarrior</a></li><li><a href="keyboards.html"><strong aria-hidden="true">2.5.</strong> Keyboards</a></li><li><ol class="section"><li><a href="ergodox.html"><strong aria-hidden="true">2.5.1.</strong> Ergodox</a></li></ol></li></ol></li><li><a href="music_stuff.html"><strong aria-hidden="true">3.</strong> Music stuff</a></li><li><ol class="section"><li><a href="korg_volca_keys.html"><strong aria-hidden="true">3.1.</strong> Korg Volca Keys</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">WIKI</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#chapter-1" id="chapter-1">Chapter 1</a></h1>
+<h1><a class="header" href="#computer-stuff" id="computer-stuff">Computer stuff</a></h1>
+<h1><a class="header" href="#vim" id="vim">Vim</a></h1>
+<h2><a class="header" href="#links" id="links">Links</a></h2>
+<ul>
+<li><a href="https://github.com/vim/vim">Vim github repo</a></li>
+<li><a href="https://neovim.io/">Neovim</a></li>
+<li><a href="https://vimways.org/">Vimways</a> -- Vim-themed advent calendar</li>
+<li>Books
+<ul>
+<li>Steve Losh -- <a href="http://learnvimscriptthehardway.stevelosh.com/">Learn Vimscript the Hard Way</a></li>
+<li>Drew Nell -- Practical Vim: Edit Text at the Speed of Thought</li>
+<li>Drew Nell -- Modern Vim: Craft Your Development Environment with Vim 8 and Neovim</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#plugins" id="plugins">Plugins</a></h2>
+<ul>
+<li>Basic
+<ul>
+<li><a href="https://github.com/tpope/vim-surround">vim-surround</a>
+<ul>
+<li><code>cs</code> -- change surround</li>
+<li><code>ds</code> -- delete surround</li>
+<li><code>ys</code> -- create surround</li>
+<li><code>.</code> works if <code>repeat.vim</code> installed</li>
+</ul>
+</li>
+<li><a href="https://github.com/tpope/vim-repeat">vim-repeat</a>
+<ul>
+<li><code>.</code> command support for some plugins</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Search
+<ul>
+<li><a href="https://github.com/dyng/ctrlsf.vim">CtrlSF</a>
+<ul>
+<li>You can edit search results in-place</li>
+<li><code>CtrlSF needle</code></li>
+<li><code>CtrlSFOpen</code>/<code>CtrlSFToggle</code> -- open/toggle window with last search results</li>
+<li>Search results window keybindings:
+<ul>
+<li><code>Enter</code>/<code>o</code> -- open file and close search window</li>
+<li><code>O</code> -- open file and leave search window opened</li>
+<li><code>P</code> -- preview</li>
+<li><code>u</code> -- undo changes</li>
+<li><code>:w</code> -- save all changes</li>
+<li><code>q</code> -- close search window</li>
+<li><code>M</code> -- toggle regular search results window with quickfix window</li>
+<li><code>&lt;C-J&gt;</code>/<code>&lt;C-K&gt;</code> - next/previous search match</li>
+</ul>
+</li>
+<li>Another commands you may want to bind
+<ul>
+<li><code>&lt;Plug&gt;CtrlSFVwordExec</code> -- find visually selected word</li>
+<li><code>&lt;Plug&gt;CtrlSFCCwordPath</code> -- find word under the cursor, with word boundaries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>UI
+<ul>
+<li><a href="https://github.com/wincent/terminus">terminus</a></li>
+<li><a href="https://github.com/vim-airline/vim-airline">vim-airline</a></li>
+<li><a href="https://github.com/mhinz/vim-startify">vim-startify</a></li>
+</ul>
+</li>
+<li>Code
+<ul>
+<li><a href="https://github.com/tpope/vim-commentary">vim-commentary</a>
+<ul>
+<li><code>gc</code> -- (toggle)comment target of a motion</li>
+<li><code>gcc</code> -- (toggle)comment strings</li>
+<li><code>gcgc</code> -- uncomment a set of adjacent commented lines</li>
+<li>Supports arbitrary filetypes, you just need to set <code>commentstring</code> option</li>
+<li>TODO: 
+<ul>
+<li><code>:7,17Commentary</code></li>
+<li><code>:g/TODO/Commentary</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>External tools integration
+<ul>
+<li><a href="https://github.com/airblade/vim-gitgutter">vim-gitgutter</a>
+<ul>
+<li>signs of changed lines</li>
+<li>jumping between the hunks: <code>[c</code>, <code>]c</code></li>
+<li>preview/stage/undo hunk: <code>&lt;leader&gt;hp</code>, <code>&lt;leader&gt;hs</code>,<code>&lt;leader&gt;hu</code></li>
+<li>hunk text object: <code>ic</code>, <code>ac</code></li>
+<li>folding unchanged text: <code>:GitGutterFold</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other
+<ul>
+<li><a href="https://github.com/junegunn/goyo.vim">Goyo</a></li>
+</ul>
+</li>
+<li>Plugins to consider
+<ul>
+<li><a href="https://github.com/terryma/vim-multiple-cursors">vim-multiple-cursors</a></li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#xorg" id="xorg">Xorg</a></h1>
+<p>X servers, X clients, <a href="https://www.x.org/releases/current/doc/xproto/x11protocol.html">X11 protocol</a>, <a href="http://cgit.freedesktop.org/xorg/xserver">Xorg</a> is an implementation.</p>
+<p><a href="http://www.x.org/releases/current/doc/libX11/libX11/libX11.html">Xlib</a> and <a href="xcb.freedesktop.org">xcb</a> реализуют протокол X11.</p>
+<p>Некоторые важные кусочки протокола:</p>
+<ul>
+<li><a href="http://www.x.org/releases/current/doc/xproto/x11protocol.html#events:Expose">Expose</a> просит у клиента нарисовать какой-нибудь кусочек окна, прямоугольничек. Например, при перемещении у окна открылась часть, которая была скрыта, и ее нужно прорисовать.</li>
+</ul>
+<p>region это структура данных, которая представляет куски окон в виде прямоугольников, чтобы как-то хранить видимые части окон, что видно а что нет, и при этом экономить память (битовая маска пикселей занимает слишком большой объем памяти).</p>
+<p>Xorg и cairo используют одну и ту же реализацию регионов из библиотеки <a href="http://www.pixman.org/">pixman</a>.</p>
+<p>Pixmap это представление набора пикселей (например, картинки) на сервере. Чтобы не отправлять постоянно список пикселей при отрисовке регионов на сервер, можно отправить на сервер Pixmap и потом на него ссылаться.</p>
+<p>Когда в окне нужно отрисовать новый кусок и метод Expose еще не отработал, есть три варианта отрисовки пока пустого места (задаются в свойствах окна):</p>
+<ul>
+<li><code>background-pixel</code> - отрисовка фиксированным цветом</li>
+<li><code>background-pixmap</code> - отрисовка загруженным pixmap'ом</li>
+<li>Делать ничего, оставить старые пиксели на месте пока не отработает Expose</li>
+</ul>
+<p>Запрос <a href="http://www.x.org/releases/current/doc/xproto/x11protocol.html#requests:ReparentWindow">ReparentWindow</a> назначает окну другого родителя. По умолчанию у всех окон родительское окно - корневое. Строить интерфейс на иерархии окон невыгодно, потому что каждое окно будет отрисовываться отдельно, для каждого будет отдельный запрос, и все будет лагать.</p>
+<h2><a class="header" href="#links-1" id="links-1">Links</a></h2>
+<ul>
+<li><a href="https://magcius.github.io/xplain/article/x-basics.html">X Window System Basics</a> with interactive examples</li>
+</ul>
+<h1><a class="header" href="#xlib" id="xlib">Xlib</a></h1>
+<h2><a class="header" href="#links-2" id="links-2">Links</a></h2>
+<ul>
+<li><a href="https://tronche.com/gui/x/xlib/">The Xlib Manual</a></li>
+<li><a href="http://yenolam.com/writings/xlibbook-0.5.pdf">Fundamentals of Xlib Programming by Examples (pdf)</a></li>
+</ul>
+<h1><a class="header" href="#taskwarrior" id="taskwarrior">Taskwarrior</a></h1>
+<h2><a class="header" href="#dates" id="dates">Dates</a></h2>
+<ul>
+<li>
+<p><code>due</code> обозначает дату, после которой задачу выполнять уже нет смысла</p>
+<ul>
+<li><code>task +TODAY list</code> - фильтрует задачи, которые нужно сделать до сегодня, шорткат</li>
+<li><code>task due:today list</code></li>
+<li><code>task +OVERDUE list</code> выведет просроченные задачи</li>
+</ul>
+</li>
+<li>
+<p><code>scheduled</code> - когда станет возможно работать над задачей</p>
+<ul>
+<li>В <code>task +READY list</code> попадают задачи без scheduled и для которых scheduled-дата прошла</li>
+<li>В <code>+READY</code> не попадают задачи, которые зависят от других задач</li>
+</ul>
+</li>
+</ul>
+<p>То есть если у задачи есть сроки от-до, их можно проставить через scheduled-due</p>
+<ul>
+<li>
+<p><code>wait</code> - скрыть задачу из списка до указанной даты</p>
+<ul>
+<li><code>task waiting</code> - ждущие задачи, альтернатива <code>task +WAITING all</code></li>
+</ul>
+</li>
+<li>
+<p><code>until</code> - автоматически удалить задачу после этой даты</p>
+</li>
+</ul>
+<h3><a class="header" href="#Как-выводить-в-отчете-по-умолчанию-только-ready-задачи" id="Как-выводить-в-отчете-по-умолчанию-только-ready-задачи">Как выводить в отчете по умолчанию только <code>+READY</code> задачи</a></h3>
+<pre><code>task config report.next.filter 'status:pending limit:page +READY'
+</code></pre>
+<p><code>status:pending limit:page</code> уже было, мы добавили <code>+READY</code>. Чтобы посмотреть, что есть, можно сделать так:</p>
+<pre><code>task show report.next.filter
+</code></pre>
+<h1><a class="header" href="#timewarrior" id="timewarrior">Timewarrior</a></h1>
+<ul>
+<li><code>timew start</code></li>
+<li><code>timew stop</code></li>
+<li><code>timew start 'Using tags', Software</code> - начать интервал с двумя указанными тегами</li>
+<li><code>timew continue</code> - начать интервал с теми же тегами что последний</li>
+</ul>
+<p>Тегам можно проставить описание в конфиге:</p>
+<pre><code>timew config tags.Software.description &quot;Learning about new software&quot;
+</code></pre>
+<p>Запись постфактум:</p>
+<ul>
+<li><code>timew track 9:00 - 11:00 'Done something'</code></li>
+<li><code>timew track 9am for 2h 'Done something'</code></li>
+<li><code>timew track 9am to 12am 'Done something'</code></li>
+<li><code>timew track 2h before 12am 'Done something'</code></li>
+</ul>
+<p>Варианты записи интервалов можно посмотреть в <code>timew help interval</code>.</p>
+<h2><a class="header" href="#links-3" id="links-3">Links</a></h2>
+<ul>
+<li><a href="https://timewarrior.net/">Official site</a></li>
+<li><a href="https://github.com/mkluge/timewcs">PDF Cheatsheet</a></li>
+</ul>
+<h1><a class="header" href="#keyboards" id="keyboards">Keyboards</a></h1>
+<h1><a class="header" href="#ergodox" id="ergodox">Ergodox</a></h1>
+<h2><a class="header" href="#Выбор-и-покупка" id="Выбор-и-покупка">Выбор и покупка</a></h2>
+<p>К Ergodox EZ давно присматривался. В этой клавиатуре есть сразу ряд вещей, которые меня привлекают.</p>
+<ul>
+<li>Раздельные половинки. Это не очень удобно в переноске, но добавляет гибкости в положении рук на столе.</li>
+<li>Ортолинейная раскладка. Это требует пары продуманных абзацев, почему мне кажется что она стоит внимания. Но я пришел к выводу, что хочу ее попробовать, и обязательно в сплите. Не в сплите кажется еще менее удобной, чем обычная клавиатура.</li>
+<li>Регулировка углов</li>
+<li>Готовые подставки под руки</li>
+<li>Кластер клавиш под большой палец. Давно кажется, что использовать большие пальцы только для пробелов, как иногда делают - это расточительно. На обычной клавиатуре, если пробел не очень большой, иногда еще получается модификаторы зажать, alt. А тут раздолье. Правда говорят что кластер находится далековато.</li>
+<li>Хосвоп-свитчи. Я не уверен, какие к каким свитчам в конце концов приду, хочется иметь возможность пробовать разное, не покупая новые клавитуры.</li>
+<li>Гибкая перепрошиваемость, куча слоев. Для кастомизации. Xmodmap как-то совсем маловато, да еще и Qt с ним работать не хочет. Тоже пару хороших абзацев можно написать, зачем это.</li>
+</ul>
+<p>А еще EZ это одна из немногих клавиатур, которые несложно у нас достать с доставкой. Она еще и бесплатная (то есть входит в стоимость). Больше кроме ограниченных китов на алиэкспрессе толком ничего нет. Вся жизнь кипит на massdrop.</p>
+<p>Минусы это цена и то, что будут проблемы с привычной русской расладкой.</p>
+<p>Вообще я не собирался до первой зарплаты ее покупать. Заказал тестер свитчей, думал пусть приедет пока, это месяц, потом еще с месяц буду тестировать и думать, какие свитчи мне нужны, и нужна ли именно эта клавиатура. Заказал, когда понял, что с 2020го года сумму безпошлинного ввоза снижают всего до 200 евро.</p>
+<ul>
+<li>Белый
+<ul>
+<li>Не был уверен, и белый и черный вроде одинаково хороши. Остановился на белом потому что часто соприкасается с пальцами, со временем пачкается. Легче заметить, когда нужно почистить. Потом правда понял, что я больше примеров кастомизированных черных себе симпатичных видел. Возможно потому что черный вариант просто популярнее. UPD: Получил белый, все нравится, и кейкапы не особенно в целом хочется менять. Все равно на них не смотрю.</li>
+</ul>
+</li>
+<li>Cherry MX White
+<ul>
+<li>Потому что хотелось и пожестче, и тактильные, и со звуком сразу. Всегда можно купить другие и поменять.</li>
+</ul>
+</li>
+<li>Чистые скульпт-клавиши
+<ul>
+<li>Клавиши с легендами красивые, но в них меньше смысла если кастомизируешь клавиатуру. Плюс хорошо когда есть стандартный сет клавиш, слепленных специально под эту клавиатуру. А поставить что-то другое всегда можно за отдельные деньги.</li>
+</ul>
+</li>
+</ul>
+<p>Дополнить:</p>
+<ul>
+<li>Сколько собирали, сколько везли</li>
+<li>Как привыкал, как быстро набирал до, как набирал скорость после</li>
+</ul>
+<h2><a class="header" href="#touch-typing" id="touch-typing">Touch typing</a></h2>
+<p>Довольно сложно найти в интернете людей, которые печатают на особенной клавиатуре уже какое-то время, и печатают прилично. Обычно первые пробы, зачастую такие клавиатуры покупают люди, которые в принципе набирают медленно или неправильно.</p>
+<p>Вот приличные примеры, которые мне случилось найти:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y1s3c_fFBv0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wyLdbvAN4Sc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2><a class="header" href="#internet-about-ergodox" id="internet-about-ergodox">Internet about Ergodox</a></h2>
+<ul>
+<li><a href="https://www.lewisf.com/dactyl-manuform/">Finding a better ergonomic keyboard</a> - Ergodox был предпоследним вариантом, остановился на Dactyl Manuform</li>
+<li><a href="https://beanstalkim.com/learn/review/ergodox-ez-review/">Dave’s Ongoing Ergodox EZ Review</a> - Автор распечатывал шпаргалку с раскладкой. Трудно перейти обратно на обычную клавиатуру - забылась раскладка. Вернулся к прежней скорости за три недели.</li>
+<li><span title="может дополняться">⏱ </span><a href="https://knowledge.rootknecht.net/ergodox-ez">ErgoDox EZ Thinkings</a> - Дополняемая статья в личной вики. В комплекте были варианты клавиш F и J без пипочек (у автора клавиши с легендами). Еще он купил сумку для переноски, но не пишет почем.</li>
+<li><a href="https://grantmichaelgardner.com/2018/09/04/ergodox-ez-8-month-report-out/">Ergodox EZ 8+ Month Report Out</a> (+<a href="https://grantmichaelgardner.com/2018/01/05/ergodox-ez-day-0/">day 0</a>, <a href="https://grantmichaelgardner.com/2018/01/03/ergodox-ez-day-2/">day -2</a>, <a href="https://grantmichaelgardner.com/2018/01/12/ergodox-ez-one-week-in/">1 week</a>, <a href="https://grantmichaelgardner.com/2018/02/02/ergodox-ez-1-month/">1 month</a>, <a href="https://grantmichaelgardner.com/2018/01/21/some-ergodox-questions-answered/">answers to readers questions</a>) - Автор поддерживает практику с обычной клавиатурой, и нескольких минут работы за ней в неделю ему хватает, но мозгу нужно небольшое время чтобы переключиться. Сложно было привыкать к нижнему ряду.</li>
+<li><a href="https://infinitetree.eu/blog/2019/04/06/the-ergodox-ez-keyboard/">The Ergodox Ez Keyboard</a> - Руки автора не могли сначала привыкнуть к такому положению, казалось что это не клавиатура. Думал использовать <a href="https://github.com/naps62/ergodox-heatmap-generator">хитпам генератор для эргодокса</a>.</li>
+<li><a href="https://writepermission.com/3-years-with-the-ergodox.html">3 years with the ErgoDox</a> - Сборка Ergodox в 13м году</li>
+<li><a href="http://xahlee.info/kbd/ergodox_keyboard.html">Review by Xah Lee</a></li>
+<li><a href="https://matteeyah.com/ergodox-ez-keyboard">Ergodox EZ is THE Keyboard</a> - Пишет что чистые скульптед-клавиши из PBT-пластика, а с печатью - из ABS.</li>
+<li><a href="https://timkadlec.com/remembers/2018-11-16-more-ergonomic-setup/">A More Ergonomic Setup</a> - Автор сначала печатал пять слов в минуту, за месяц вернулся к старой скорости в 80 слов.</li>
+<li><a href="https://jakemccrary.com/blog/2019/08/15/switching-my-ergodox-to-qmk-firmware/">Switching my Ergodox to QMK firmware</a></li>
+<li><a href="https://explog.in/notes/ergodox.html">Ergodox EZ Layout</a></li>
+<li><a href="https://geekhack.org/index.php?topic=62848.0">Thumb cluster critique thread</a></li>
+</ul>
+<h2><a class="header" href="#links-4" id="links-4">Links</a></h2>
+<ul>
+<li><a href="https://www.ergodox.io/">Official site of Ergodox (not EZ)</a></li>
+<li><a href="https://github.com/zsa">ZSA Github account</a></li>
+<li><a href="https://people.ergodox-ez.com/">Ergodox EZ Users</a></li>
+</ul>
+<h1><a class="header" href="#music-stuff" id="music-stuff">Music stuff</a></h1>
+<h1><a class="header" href="#korg-volca-keys" id="korg-volca-keys">Korg Volca Keys</a></h1>
+<h2><a class="header" href="#notes" id="notes">Notes</a></h2>
+<ul>
+<li>Пишут что может отправлять ноты, нужно только припаять миди-кабель к плате</li>
+</ul>
+<h2><a class="header" href="#selected-performances-on-youtube" id="selected-performances-on-youtube">Selected performances on Youtube</a></h2>
+<h3><a class="header" href="#korg-volca-keys---dark-ambient--soundtrack--horror" id="korg-volca-keys---dark-ambient--soundtrack--horror">Korg Volca Keys - Dark Ambient / Soundtrack / Horror</a></h3>
+<p>KVC only, multitrack</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CjSJQbEYvRs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3><a class="header" href="#korg-volca-keys-beautiful-arps-and-128-note-sequence" id="korg-volca-keys-beautiful-arps-and-128-note-sequence">Korg Volca Keys beautiful arps! (and 128-note sequence)</a></h3>
+<p>KVC + reverb</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-cIDA4XCZdI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3><a class="header" href="#volca-keys-relaxing-ambient-melodies" id="volca-keys-relaxing-ambient-melodies">Volca Keys Relaxing Ambient Melodies</a></h3>
+<p>KVC, <a href="https://valhalladsp.com/shop/reverb/valhalla-shimmer/">Valhalla Shimmer</a> reverb plugin and other processing</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Pogw-a7Tv4U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3><a class="header" href="#one-synth-song-challenge-korg-volca-keys" id="one-synth-song-challenge-korg-volca-keys">One Synth Song Challenge: Korg Volca Keys</a></h3>
+<p>KVC only, multitrack</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5mXohy2mTEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3><a class="header" href="#synthwave--noir--inspired-volca-keys-with-tape-sync--guitars-at-the-end" id="synthwave--noir--inspired-volca-keys-with-tape-sync--guitars-at-the-end">Synthwave / Noir- inspired Volca Keys with Tape Sync + guitars at the end</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jT3-yTnvmFk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2><a class="header" href="#youtube-tutorials" id="youtube-tutorials">Youtube tutorials</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Ea9-U8M5b7I">Volca Keys: how to program Stranger Things sequence with active step</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
