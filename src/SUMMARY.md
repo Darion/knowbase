@@ -1,6 +1,6 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [About](./about.md)
 - [Computer stuff](./computer_stuff.md)
   - [Vim](./vim.md)
   - [Xorg](./xorg.md)
