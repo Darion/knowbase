@@ -18,6 +18,15 @@ timew config tags.Software.description "Learning about new software"
 
 Варианты записи интервалов можно посмотреть в `timew help interval`.
 
+## Timewarrior hooks
+
+```
+$ cp /usr/share/doc/timew/ext/on-modify.timewarrior ~/.task/hooks/
+$ sed -i s/python2/python3 ~/.task/hooks/on-modify.timewarrior
+$ chmod +x ~/.task/hooks/on-modify.timewarrior
+$ task diagnostics  # installation checks
+```
+
 
 ## Links
 
