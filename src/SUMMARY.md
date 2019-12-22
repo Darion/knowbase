@@ -11,6 +11,8 @@
   - [Keyboards](./keyboards.md)
     - [Ergodox](./ergodox.md)
   - [Cyberdecks](./cyberdecks.md)
+  - [IRC](./irc.md)
+  - [Ledger](./ledger.md)
 - [Music stuff](./music_stuff.md)
   - [Korg Volca Keys](./korg_volca_keys.md)
     - [Korg Volca Keys Inbox](./korg_volca_keys.inbox.md)

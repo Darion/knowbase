@@ -18,6 +18,13 @@ timew config tags.Software.description "Learning about new software"
 
 Варианты записи интервалов можно посмотреть в `timew help interval`.
 
+Отчеты. Списком:
+* `timew summary`
+
+ASCII-диаграммами:
+* `timew day`
+* `timew week`
+
 ## Timewarrior hooks
 
 ```
