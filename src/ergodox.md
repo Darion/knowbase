@@ -54,8 +54,13 @@
 * [Ergodox EZ Layout](https://explog.in/notes/ergodox.html)
 * [Thumb cluster critique thread](https://geekhack.org/index.php?topic=62848.0)
 
+## Notes
+
+* ABS-пластик корпуса может отполироваться. Источник: [страница xahlee про ergodox](http://xahlee.info/kbd/ergodox_keyboard.html), ищи "case wear shine".
+
 ## Links
 
 * [Official site of Ergodox (not EZ)](https://www.ergodox.io/)
 * [ZSA Github account](https://github.com/zsa)
 * [Ergodox EZ Users](https://people.ergodox-ez.com/)
+* [iFixit teardown](https://www.ifixit.com/Guide/ErgoDox+EZ+Keyboard+Repairability+Assessment/125077)

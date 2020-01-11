@@ -38,3 +38,6 @@ KVC only, multitrack
 
 * [Volca Keys: how to program Stranger Things sequence with active step](https://www.youtube.com/watch?v=Ea9-U8M5b7I)
 
+## Other links
+
+* [Руководство на русском](https://pop-music.ru/upload/iblock/576/5769350942b0a7035dbe477744fc8cf2.pdf)
