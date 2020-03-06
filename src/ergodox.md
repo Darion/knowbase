@@ -64,3 +64,4 @@
 * [ZSA Github account](https://github.com/zsa)
 * [Ergodox EZ Users](https://people.ergodox-ez.com/)
 * [iFixit teardown](https://www.ifixit.com/Guide/ErgoDox+EZ+Keyboard+Repairability+Assessment/125077)
+* [Deskthority wiki page](https://deskthority.net/wiki/ErgoDox)

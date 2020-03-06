@@ -20,6 +20,9 @@
     * `.` works if `repeat.vim` installed
   * [vim-repeat](https://github.com/tpope/vim-repeat)
     * `.` command support for some plugins
+  * [vim-sneak](https://github.com/justinmk/vim-sneak)
+    * `s{char}{char}` -- search place with this two characters, `;` to go to next match
+    * `S` -- search backwards
 * Search
   * [CtrlSF](https://github.com/dyng/ctrlsf.vim)
     * You can edit search results in-place
@@ -50,6 +53,9 @@
     * TODO: 
       * `:7,17Commentary`
       * `:g/TODO/Commentary`
+  * [vim-pythonsense](https://github.com/jeetsukumaran/vim-pythonsense)
+    * `]]` -- beginning of next class
+    * `]m` -- beginning of next function/method
 * External tools integration
   * [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
     * signs of changed lines
