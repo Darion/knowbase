@@ -18,9 +18,14 @@
 * [Someone questioning lubing](https://deskthority.net/viewtopic.php?t=21290)
 * [The Stab Lab: A living stabilizer modification guide - by Quakemz](https://topclack.com/textclack/2018/4/29/the-stab-lab-a-stabilizer-modification-guide-by-quakemz)
 * [The ultimate guide to keyboard layouts and form factors](https://blog.wooting.nl/the-ultimate-guide-to-keyboard-layouts-and-form-factors/)
+* [BLE Micro Pro](https://github.com/sekigon-gonnoc/BLE-Micro-Pro) 
 
 ## Communities
 
 * [deskthority](https://deskthority.net/)
 * [keebtalk](https://www.keebtalk.com/)
+
+## Build logs
+
+* [Dactyl Manuform with trackball](https://medium.com/@kincade/track-beast-build-log-a-trackball-dactyl-manuform-19eaa0880222)
 

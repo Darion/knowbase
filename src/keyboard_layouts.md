@@ -54,6 +54,7 @@ z 0.077%
   * [Colemak Mod-DH](https://colemakmods.github.io/mod-dh/)
 * [Norman](https://normanlayout.info/)
 * [RSTHD](https://xsznix.wordpress.com/2016/05/16/introducing-the-rsthd-layout/), designed for ergodox
+* [BEAKL](https://deskthority.net/wiki/BEAKL)
 
 ## Quotes from internet about keyboard layout design
 

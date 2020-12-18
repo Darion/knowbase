@@ -9,6 +9,7 @@
   * Steve Losh -- [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
   * Drew Nell -- Practical Vim: Edit Text at the Speed of Thought
   * Drew Nell -- Modern Vim: Craft Your Development Environment with Vim 8 and Neovim
+* Cheatsheets: [from michael](http://michael.peopleofhonoronly.com/vim/)
 
 ## Plugins
 
@@ -55,6 +56,7 @@
       * `:g/TODO/Commentary`
   * [vim-pythonsense](https://github.com/jeetsukumaran/vim-pythonsense)
     * `]]` -- beginning of next class
+      * issue: jumps to classes on lower indent level, inside another class
     * `]m` -- beginning of next function/method
 * External tools integration
   * [vim-gitgutter](https://github.com/airblade/vim-gitgutter)

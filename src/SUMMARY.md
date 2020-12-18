@@ -18,6 +18,8 @@
   - [IRC](./irc.md)
   - [Ledger](./ledger.md)
   - [Laptops](./laptops.md)
+- [Knowledge Bases](knowledge_bases.md)
+- [Personal Data Collection](personal_data_collection.md)
 - [Music stuff](./music_stuff.md)
   - [Korg Volca Keys](./korg_volca_keys.md)
     - [Korg Volca Keys Inbox](./korg_volca_keys.inbox.md)
